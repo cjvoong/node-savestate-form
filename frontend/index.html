@@ -1,0 +1,72 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save State Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #myForm {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            /* Adjust the margin to create space from the top */
+        }
+
+        .form-row {
+            display: flex;
+            margin-bottom: 10px;
+        }
+
+        .form-row label {
+            width: 100px;
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .button-row button {
+            margin-right: 10px;
+        }
+
+        button {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-container">
+        <form id="myForm">
+            <div class="form-row">
+                <label for="name">Name:</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" required>
+            </div>
+            <div class="button-row">
+                <button type="button" onclick="addRow()">Add Row</button>
+                <button type="button" onclick="clearForm()">Clear Form</button>
+                <button type="button" onclick="loadFormState()">Reload</button>
+                <button type="button" onclick="edit()">Edit</button>
+                <button type="button" onclick="clearState()">Clear Progress</button>
+                <button type="button" onclick="saveProgress()">Save Progress</button>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
